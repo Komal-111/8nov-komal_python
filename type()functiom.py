@@ -1,0 +1,12 @@
+a=156
+b=3.14
+c='komal'
+d='25komal'
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print(c)
+print(type(c))
+print(d)
+print(type(d))
