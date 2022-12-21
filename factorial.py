@@ -1,11 +1,11 @@
-# FACTORIAL NUMBER PROGRAMME
-num=int(input("ENTER  A NUMBER :"))
-factorial=1
-if num < 0:
-   print("this number is not factorial ")
-elif num == 0:
-   print("The factorial of 0 is 1")
-else:
-   for i in range(1,num + 1):
-       factorial = factorial*i
-   print("The factorial of",num,"is",factorial)
+#Write a Python function to calculate the factorial of a number (a 
+#nonnegative integer)
+
+def fact(n):
+    return 1 
+    if (n==1 or n==0)else  n*fact (n-1):
+num=5
+print("factorial of", num,"is",)
+fact(num)
+
+    
