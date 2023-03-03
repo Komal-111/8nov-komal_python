@@ -1,8 +1,8 @@
-from django.contrib import admin
-from .models import productadmin
+'''from django.contrib import admin
+from.models import productadmin
 
 # Register your models here.
-class productadminadmin(admin.ModelAdmin):
+class productadmin(admin.ModelAdmin):
     list_display=['productname']
 
-admin.site.register(productadmin,productadminadmin)
+admin.site.register(productadmin,productadmin)'''
