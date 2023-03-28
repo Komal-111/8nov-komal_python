@@ -4,10 +4,10 @@ from teaapp import views
 
 urlpatterns = [
     path('',views.index),
-    path('teaservice/',views.teaservice, name='teaservice'),
-    path('flavors/',views.flavors),
+    path('teastore/',views.teastore, name='teastore'),
+    path('cafes/',views.cafes),
     path('about/',views.about),
     path('contact/',views.contact),
-    #path('userlogout/',views.userlogout),
+    path('userlogout/',views.userlogout),
 ]
    

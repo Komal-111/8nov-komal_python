@@ -46,19 +46,62 @@
           <a class="nav-link active" aria-current="page" href="#" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/teaservice" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;"> Tea services</a>
+          <a class="nav-link" href="/teastore" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;"> Tea store</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/flavors" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;"  >
-            Flavours
-          </a>
-          <ul class="dropdown-menu" style="background-color: #F08080;">
-            <li><a class="dropdown-item" href="#" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:smaller;" >Black Tea</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:smaller;">Green Tea</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:smaller;">Honey Tea</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:smaller;">Dark Tea</a></li>
-          </ul>
-        </li>
+          
+          <a class="nav-link dropdown-toggle" href="/cafes" id="navbarDropdownMenuLink" role="button"
+                    data-mdb-toggle="dropdown"  style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;" aria-expanded="false">
+                    CAFES
+                  </a>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                  
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        Submenu &raquo;
+                      </a>
+                      <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 2</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="#">Multi level 1</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Multi level 2</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 4</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 5</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <li class="nav-item">
           <a class="nav-link active" href="/about" style="color:black; text-decoration-line: underline;font-variant: var(100%);font-size:larger;">About</a>
         </li>
@@ -111,7 +154,7 @@
       </div>
       <div class="modal-body">
         <!-- SIGNUP FORM CODE START-->
-        <form  method="post"class="row g-3 needs-validation" novalidate>
+        <form  method="POST" class="row g-3 needs-validation" novalidate>
           {% csrf_token %}
           <div class="col-md-6">
             <label for="validationCustom01" class="form-label">First name</label>
@@ -141,7 +184,7 @@
           </div>
           <div class="col-md-6">
             <label for="validationCustom03" class="form-label">City</label>
-            <input type="text"  name="city"class="form-control" id="validationCustom03" required>
+            <input type="text"  name="city" class="form-control" id="validationCustom03" required>
             <div class="invalid-feedback">
               Please provide a valid city.
             </div>
@@ -165,7 +208,7 @@
           </div>
           
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Signup</button>
+            <button class="btn btn-primary" name="signup"  value="signup" type="submit">Signup</button>
           </div>
         </form>
       </div>
@@ -186,7 +229,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <form method="post">
+              <form method="POST">
                   {% csrf_token %}
                   <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -209,13 +252,104 @@
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
           </div>
-      </div>
+      </div> 
   </div>
 </div>
-
-
-
-
-
 <!--LOGIN MODAL END-->
+
+
+<!--NAVBAR start-->
+<footer>	
+  <div class="ftrCvr">			
+    <div class="ftrtopCvr"  style="background-color: black;">
+      <div class="container  ">
+        <div class="ftrtop clearfix">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="footertittle">ALSO AVAILABLE ON</div>
+              <!-- <img class="mt-3" src="/images/also-available-on.png" alt="ALSO AVAILABLE ON"> -->	
+              <div class="ftr-delv-Links">
+                <img id="ftr-delv" src="https://www.teapost.in/wp-content/themes/teapost/images/also-available-on.png" border="0" width="231" height="264" orgWidth="231" orgHeight="264" usemap="#ftr-delv-img" alt="ALSO AVAILABLE ON" />
+                <map name="ftr-delv-img" id="ftr-delv-img">
+                <area  alt="Swiggy" title="Swiggy" href="https://www.swiggy.com/restaurants/tea-post-bodakdev-pakwan-cross-road-ahmedabad-530589" shape="rect" coords="0,0,80,77" style="outline:none;" target="_blank"     />
+                <area  alt="zomato" title="zomato" href="https://www.zomato.com/ahmedabad/restaurants/tea-post?category=1" shape="rect" coords="0,76,80,156" style="outline:none;" target="_blank"     />
+                </map>
+              </div>										
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="footerlink ms-lg-5">
+                <div class="footertittle">OUR POLICIES</div>
+                <ul>
+                  <li><a href="https://www.teapost.in/privacy-policy/">Privacy Policy</a></li>
+                  <li><a href="https://www.teapost.in/shipping-policy/">Shipping Policy</a></li>
+                  <li><a href="https://www.teapost.in/terms-and-conditions/">Terms & Conditions</a></li>
+                  <li><a href="https://www.teapost.in/refund-cancellation-policy/">Refund & Cancellation Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="footerlink ms-lg-5 mt-lg-0 mt-md-5">
+                <div class="footertittle">Quick Links</div>
+                <ul>
+                  <li><a href="https://www.teapost.in/shop/" style="border-color: bisque; font-family: Arial, Helvetica, sans-serif;">Shop</a></li>
+                  <li><a href="https://www.teapost.in/career/">Career</a></li>
+                  <li><a href="https://www.teapost.in/a-place-to-talk/">A Place to Talk</a></li>
+                  <li><a href="https://www.teapost.in/apni-chai-ki-dukan/">Apni Chai Ki Dukaan</a></li>
+                  <li><a href="https://www.teapost.in/the-desi-cafe/">The Desi Cafe</a></li>
+                  <li><a href="https://www.teapost.in/blog/">Blog</a></li>
+                  <li><a href="https://www.teapost.in/contact-us/">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="footercontact mt-lg-0 mt-md-5">
+                <div class="footertittle">Contact us</div>
+                <div class="contact-block-side">
+                  <i class="ti-location-pin"></i>
+                  <p>D-001 Elanza Crest, Sindhu Bhavan Road, Bodakdev, Ahmedabad - 380059. Gujarat, India</p>
+                </div>
+                <div class="contact-block-side">
+                  <i class="ti-mobile"></i>
+                                      <p> <a href="tel:+919277000077">+91 92770 00077</a> </p>
+                </div>
+                <div class="contact-block-side">
+                  <i class="ti-email"></i>
+                                      <p> <a href="mailto:support@teapost.in">support@teapost.in</a> </p>
+                </div>
+                
+              </div>
+            </div>
+          </div>	
+        </div>							
+      </div>
+      <div class="ftrbtm" >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" >	
+              <div class="copyright text-left">
+                <p>© 2023 Tea post. All Rights Reserved. Design & Developed By <a href="https://www.aoneseoservice.com/" target="_blank">Aone Seo</a></p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="ftrLinksCvr">				
+                <ul class="ftrsocialLinks">
+                                      <li><a target="_blank" href="https://www.facebook.com/teapostofficial"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a target="_blank" href="https://twitter.com/teapostofficial"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a target="_blank" href="https://in.linkedin.com/company/tea-post"><i class="fa-brands fa-linkedin-in"></i></a></li> 
+                  <li><a target="_blank" href="https://www.instagram.com/teapostofficial"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!--NAVBAR end-->
 </html>
